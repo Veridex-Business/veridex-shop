@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Placeholder: Happy Birthday topper">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff1a8"/><stop offset="1" stop-color="#fffbe3"/></linearGradient></defs>
+  <rect width="800" height="600" fill="url(#g)"/>
+  <rect x="24" y="24" width="752" height="552" rx="28" fill="none" stroke="#201c30" stroke-opacity=".22" stroke-width="3" stroke-dasharray="14 12"/>
+  <g transform="translate(354.0 230.0)" fill="none" stroke="#201c30" stroke-opacity=".45" stroke-width="5" stroke-linejoin="round">
+    <rect x="0" y="16" width="92" height="64" rx="12"/><path d="M28 16 L36 2 H56 L64 16"/><circle cx="46" cy="48" r="17"/>
+  </g>
+  <text x="400.0" y="352.0" text-anchor="middle" font-family="Georgia, serif" font-size="38" font-weight="700" fill="#201c30" fill-opacity=".75">Your photo here</text>
+  <text x="400.0" y="392.0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="24" fill="#201c30" fill-opacity=".55">Happy Birthday topper</text>
+  <text x="400.0" y="548" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#201c30" fill-opacity=".4">replace images/topper-birthday.svg</text>
+</svg>
