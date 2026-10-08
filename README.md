@@ -1,5 +1,7 @@
 # Veridex Prints — shop page (first draft)
 
+Live site: https://veridex-business.github.io/veridex-shop/
+
 This folder is a one-page shop website. Open `index.html` in any web browser to see it.
 
 - `index.html` — the whole page (text, colours and layout all in this one file)
