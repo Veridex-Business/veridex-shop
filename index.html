@@ -176,9 +176,13 @@
     .mat{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
     .mat .panel{padding:30px}
     .mat h3{font-size:28px;margin-bottom:8px}
-    .swatches{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}
-    .sw{text-align:center;font-size:13px;font-weight:700}
-    .sw i{display:block;aspect-ratio:1;border-radius:50%;margin:0 auto 8px;width:100%;max-width:74px;box-shadow:inset 0 -6px 12px rgba(0,0,0,.12),0 6px 14px -8px rgba(32,28,48,.5);border:2px solid rgba(255,255,255,.7)}
+    .swatches{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 12px;margin-top:22px}
+    .sw{min-width:0;text-align:center;font-size:13px;font-weight:700;line-height:1.25}
+    .sw i{display:block;aspect-ratio:1;border-radius:50%;margin:0 auto 8px;width:100%;max-width:72px;box-shadow:inset 0 -6px 12px rgba(0,0,0,.12),0 6px 14px -8px rgba(32,28,48,.5);border:2px solid rgba(255,255,255,.55)}
+    .sw.light i{border:1.5px solid rgba(32,28,48,.28);box-shadow:inset 0 -8px 14px rgba(32,28,48,.05),0 6px 14px -8px rgba(32,28,48,.22)}
+    .sw span{display:block}
+    .sw small{display:block;margin-top:3px;font-size:11px;font-weight:600;line-height:1.3;color:var(--ink-soft)}
+    .sw:last-child:nth-child(odd){grid-column:1 / -1;justify-self:center;width:min(220px,calc(50% - 6px))}
     .care{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:14px}
     .care li{display:flex;gap:12px;align-items:flex-start}
     .care .ico{flex:none;width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:var(--t-teal);color:#0a7a5a}
@@ -241,6 +245,8 @@
       .panel-section.stick{position:relative}
     }
     @media (max-width:860px){
+      .swatches{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 14px}
+      .sw:last-child:nth-child(3n+1){grid-column:1 / -1;justify-self:center;width:min(200px,34%)}
       .nav-links{display:none}
       .hero{grid-template-columns:1fr;gap:40px}
       .hero-media{max-width:440px;margin:0 auto;width:100%}
@@ -255,7 +261,9 @@
       .wrap{width:calc(100% - 32px)}
       .steps,.grid{grid-template-columns:1fr}
       .checklist ul{grid-template-columns:1fr}
-      .swatches{grid-template-columns:repeat(4,1fr);gap:10px}
+      .swatches{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 10px}
+      .sw:last-child:nth-child(odd){width:min(200px,calc(50% - 5px))}
+      .sw i{max-width:64px}
       .nav .wrap{height:64px}
       .logo{font-size:19px}
       .nav .btn{padding:10px 14px;font-size:14px}
@@ -465,7 +473,7 @@
                 <li><span>Size</span><span>approx. [—] cm each</span></li>
                 <li><span>Set of</span><span>[—] pieces</span></li>
                 <li><span>Material</span><span>Food-safe PLA</span></li>
-                <li><span>Colours</span><span>Pick up to [—]</span></li>
+                <li><span>Colours</span><span>13 to choose from</span></li>
               </ul>
               <p class="safety"><i data-lucide="info"></i> Single use. Remove before eating.</p>
               <div class="buy-row">
@@ -511,17 +519,22 @@
         <div class="mat">
           <div class="panel reveal">
             <h3>Colours</h3>
-            <p class="t" style="color:var(--ink-soft)">A starting range — ask if you need a specific shade. <span class="ph">update to your real filament colours</span></p>
+            <p class="t" style="color:var(--ink-soft)">A starting range — ask if you need a specific shade.</p>
             <!-- COLOURS: edit names and hex codes to match the filament you actually stock -->
             <div class="swatches">
-              <div class="sw"><i style="background:#ffffff"></i>White</div>
-              <div class="sw"><i style="background:#1f1c26"></i>Black</div>
-              <div class="sw"><i style="background:#d4af37;background-image:linear-gradient(135deg,#f3dd8a,#b8902a)"></i>Gold</div>
-              <div class="sw"><i style="background:#c0c0c8;background-image:linear-gradient(135deg,#eeeef2,#9a9aa6)"></i>Silver</div>
-              <div class="sw"><i style="background:#ff8fc7"></i>Pink</div>
-              <div class="sw"><i style="background:#6fb6e8"></i>Blue</div>
-              <div class="sw"><i style="background:#b49be0"></i>Lilac</div>
-              <div class="sw"><i style="background:#e0b896;background-image:linear-gradient(135deg,#f1d4bb,#c9967a)"></i>Rose gold</div>
+              <div class="sw light"><i style="background:#FFFFFF"></i><span>Matte Ivory White</span><small>Bambu PLA Matte</small></div>
+              <div class="sw"><i style="background:#000000"></i><span>Matte Charcoal</span><small>Bambu PLA Matte</small></div>
+              <div class="sw"><i style="background:#D3B7A7"></i><span>Matte Latte Brown</span><small>Bambu PLA Matte</small></div>
+              <div class="sw"><i style="background:#7D6556"></i><span>Matte Dark Brown</span><small>Bambu PLA Matte</small></div>
+              <div class="sw"><i style="background:#61C680"></i><span>Matte Grass Green</span><small>Bambu PLA Matte</small></div>
+              <div class="sw"><i style="background:#00AE42"></i><span>Bambu Green</span><small>Bambu PLA Basic</small></div>
+              <div class="sw"><i style="background:#A3D8E1"></i><span>Matte Ice Blue</span><small>Bambu PLA Matte</small></div>
+              <div class="sw"><i style="background:#AE96D4"></i><span>Matte Lilac Purple</span><small>Bambu PLA Matte</small></div>
+              <div class="sw"><i style="background:#EEA6BC"></i><span>Sakura Pink</span><small>Elegoo PLA</small></div>
+              <div class="sw"><i style="background:#C12E1F"></i><span>Bambu Red</span><small>Bambu PLA Basic</small></div>
+              <div class="sw"><i style="background:#F99963"></i><span>Matte Mandarin Orange</span><small>Bambu PLA Matte</small></div>
+              <div class="sw"><i style="background:#F7D959"></i><span>Matte Lemon Yellow</span><small>Bambu PLA Matte</small></div>
+              <div class="sw"><i style="background:#FEC600"></i><span>Sunflower Yellow</span><small>Bambu PLA Basic</small></div>
             </div>
           </div>
           <div class="panel reveal d1">
