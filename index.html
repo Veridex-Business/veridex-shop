@@ -164,9 +164,12 @@
     .card h3 a{color:inherit;text-decoration:none}
     .card h3 a:hover{color:var(--deep)}
     .choose-link{align-self:flex-start;flex:none;margin-top:10px;font:800 13px/1 var(--body);color:var(--deep);text-decoration:none}
-    /* Catalogue cards without a Choose colours link still keep that row of space, so collapsed cards match. */
-    #catalogue .card:not(:has(.choose-link)) h3{margin-bottom:calc(8px + 10px + 13px)}
+    .choose-link.is-spacer{visibility:hidden;pointer-events:none;user-select:none}
     .choose-link:hover{text-decoration:underline}
+    /* Every catalogue price reserves the wider label, so the buy row wraps at the same width on every card. */
+    #catalogue .price{display:inline-grid;grid-template-columns:max-content;justify-items:start}
+    #catalogue .price small{grid-area:2 / 1}
+    #catalogue .price .price-match{visibility:hidden}
     .card .desc{color:var(--ink-soft);font-size:15.5px;line-height:1.4}
     .specs{margin:16px 0 0;padding:0;list-style:none;border-top:1px dashed rgba(32,28,48,.2)}
     .specs li{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px dashed rgba(32,28,48,.2);font-size:14px}
@@ -330,7 +333,6 @@
       .details-toggle{margin-top:8px;padding:4px 8px 4px 9px;font-size:11px;gap:2px}
       .details-toggle svg{width:13px;height:13px}
       .choose-link{margin-top:8px;font-size:12px}
-      #catalogue .card:not(:has(.choose-link)) h3{margin-bottom:calc(6px + 8px + 12px)}
     }
   </style>
 </head>
@@ -409,7 +411,7 @@
                 <li><span>Colours</span><span>Pick 1</span></li>
               </ul>
               <div class="buy-row">
-                <p class="price">€12<small>PER TOPPER</small></p>
+                <p class="price">€12<small>PER TOPPER</small><small class="price-match" aria-hidden="true">PRICE COMING SOON</small></p>
                 <!-- STRIPE: paste this product's Stripe Payment Link between the quotes in data-stripe-link="" (e.g. https://buy.stripe.com/...). Not live until shop terms, returns & privacy are finalised. -->
                 <button class="btn btn-pink buy" type="button" data-stripe-link="" disabled aria-disabled="true">Coming soon</button>
               </div>
@@ -428,7 +430,7 @@
                 <li><span>Colours</span><span>Pick 1</span></li>
               </ul>
               <div class="buy-row">
-                <p class="price">€12<small>PER TOPPER</small></p>
+                <p class="price">€12<small>PER TOPPER</small><small class="price-match" aria-hidden="true">PRICE COMING SOON</small></p>
                 <!-- STRIPE: paste this product's Stripe Payment Link between the quotes in data-stripe-link="". -->
                 <button class="btn btn-pink buy" type="button" data-stripe-link="" disabled aria-disabled="true">Coming soon</button>
               </div>
@@ -447,7 +449,7 @@
                 <li><span>Colours</span><span>Pick 2 (background + name/age)</span></li>
               </ul>
               <div class="buy-row">
-                <p class="price">€15<small>PER TOPPER</small></p>
+                <p class="price">€15<small>PER TOPPER</small><small class="price-match" aria-hidden="true">PRICE COMING SOON</small></p>
                 <!-- STRIPE: paste this product's Stripe Payment Link between the quotes in data-stripe-link="". -->
                 <button class="btn btn-pink buy" type="button" data-stripe-link="" disabled aria-disabled="true">Coming soon</button>
               </div>
@@ -459,6 +461,7 @@
             <div class="media"><img src="images/topper-wedding.svg" alt="Placeholder photo: wedding Mr and Mrs cake topper" width="800" height="600" loading="lazy" /><span class="tag">Placeholder</span></div>
             <div class="body">
               <h3>Wedding / Mr &amp; Mrs topper</h3>
+              <span class="choose-link is-spacer" aria-hidden="true">Choose colours</span>
               <p class="desc">“Mr &amp; Mrs”, both names, a surname or the date — for weddings, engagements and anniversaries. Printed in PLA.</p>
               <ul class="specs">
                 <li class="size-line"><span class="size-copy"><span>Size</span><span>approx. [—] cm wide</span></span><p class="safety"><i data-lucide="info"></i> Single use</p></li>
@@ -477,6 +480,7 @@
             <div class="media"><img src="images/cupcake-set.svg" alt="Placeholder photo: set of cupcake toppers" width="800" height="600" loading="lazy" /><span class="tag">Placeholder</span></div>
             <div class="body">
               <h3>Cupcake toppers set</h3>
+              <span class="choose-link is-spacer" aria-hidden="true">Choose colours</span>
               <p class="desc">A set of small matching toppers — initials, numbers or little shapes — for cupcakes and party treats. Printed in PLA.</p>
               <ul class="specs">
                 <li class="size-line"><span class="size-copy"><span>Size</span><span>approx. [—] cm each</span></span><p class="safety"><i data-lucide="info"></i> Single use</p></li>
