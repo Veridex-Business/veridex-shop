@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en-IE">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Veridex Prints — Cake topper</title>
+  <meta name="description" content="Choose colours for a custom 3D-printed cake topper. Online checkout is not open yet." />
+  <script>
+    window.SHOP = {
+      name: "Veridex Prints",
+      email: "hello@example.com",
+      instagram: "veridexprints",
+      makerName: "[Maker name]",
+      makerAddress: "[Street, Town, County, Eircode], Ireland",
+      salesOpen: false
+    };
+    document.documentElement.classList.add(/[?&]static\b/.test(location.search) ? 'static' : 'js');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <style>
+    :root{
+      --paper:#f6f1e7; --paper-2:#fbf8f2; --ink:#201c30; --ink-soft:#4a4560;
+      --pink:#ff48b0; --deep:#d61b7d; --blue:#0078bf; --yellow:#ffe800;
+      --t-pink:#fde3ef; --t-yellow:#fbf3c9; --t-orange:#fde6d4;
+      --radius:26px;
+      --shadow:0 1px 0 rgba(32,28,48,.06), 0 18px 40px -18px rgba(32,28,48,.28);
+      --shadow-sm:0 1px 0 rgba(32,28,48,.05), 0 8px 22px -12px rgba(32,28,48,.25);
+      --display:"Fraunces", Georgia, "Times New Roman", serif;
+      --body:"Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+      --max:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{position:relative;margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    img{max-width:100%;height:auto;display:block}
+    a{color:inherit}
+    h1,h2,h3{font-family:var(--display);line-height:1.05;margin:0;letter-spacing:-.02em;font-weight:800}
+    p{margin:0}
+    body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.10;mix-blend-mode:multiply;
+      background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.13  0 0 0 0 0.11  0 0 0 0 0.19  0 0 0 .9 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+    .wrap{width:min(var(--max),100% - 40px);margin-inline:auto}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font:700 16px/1 var(--body);padding:15px 22px;border-radius:999px;border:2px solid var(--ink);text-decoration:none;cursor:pointer;background:transparent;color:var(--ink)}
+    .btn svg{width:18px;height:18px}
+    .btn-dark{background:var(--ink);color:var(--paper)}
+    .btn-pink{background:var(--pink);color:var(--ink);box-shadow:4px 4px 0 var(--blue)}
+    .btn[disabled],.btn[aria-disabled="true"]{cursor:not-allowed;background:repeating-linear-gradient(-45deg,#ece6da 0 8px,#e4ddcf 8px 16px);color:#7c7790;border-color:#bdb6c6;border-style:dashed;box-shadow:none}
+    .ph{display:inline-block;font:800 10.5px/1 var(--body);letter-spacing:.1em;text-transform:uppercase;padding:5px 8px;border-radius:999px;background:var(--yellow);color:var(--ink);vertical-align:middle;margin-left:6px;border:1px solid rgba(32,28,48,.2)}
+    .draftbar{background:var(--ink);color:var(--paper);font-size:14px;text-align:center;padding:9px 16px;position:relative;z-index:60}
+    .draftbar strong{color:var(--pink)}
+    .nav{position:sticky;top:0;z-index:50;background:rgba(246,241,231,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(32,28,48,.08)}
+    .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:72px}
+    .logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:-.02em;white-space:nowrap}
+    .logo-mark{width:36px;height:36px;border-radius:11px;background:var(--pink);display:grid;place-items:center;box-shadow:3px 3px 0 var(--blue);flex:none}
+    .logo-mark svg{width:20px;height:20px;color:var(--ink)}
+    .nav-links{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-weight:600;font-size:15px}
+    .nav-links a{text-decoration:none;opacity:.8;white-space:nowrap;text-transform:uppercase;letter-spacing:.06em}
+    .nav-toggle{display:none}
+    .nav-links a:hover{opacity:1;color:var(--deep)}
+    .nav .btn{padding:12px 18px;font-size:15px}
+    .tint-yellow{background:linear-gradient(180deg,var(--t-yellow),var(--paper) 55%)}
+    .tint-orange{background:linear-gradient(180deg,var(--t-orange),var(--paper))}
+    footer{border-radius:36px 36px 0 0;padding:60px 0 40px;position:relative;z-index:10;box-shadow:0 -18px 40px -24px rgba(32,28,48,.25)}
+    .foot{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:30px}
+    .foot h4{font:800 13px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;margin:6px 0 14px;color:var(--deep)}
+    .foot p,.foot li{font-size:14.5px;color:var(--ink-soft)}
+    .foot ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+    .foot a{text-decoration:none}
+    .foot a:hover{color:var(--deep)}
+    .legal{margin-top:40px;padding-top:20px;border-top:1px dashed rgba(32,28,48,.2);display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:13px;color:var(--ink-soft)}
+    .js .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1)}
+    .js .reveal.in{opacity:1;transform:none}
+    .static .reveal{opacity:1!important;transform:none!important;transition:none!important}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    .product-page{padding:36px 0 72px}
+    .back{margin:0 0 22px}
+    .back a{display:inline-flex;align-items:center;gap:6px;font-weight:800;text-decoration:none;color:var(--deep)}
+    .back a:hover{text-decoration:underline}
+    .back svg{width:18px;height:18px}
+    .product{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:start}
+    .product-photo{border-radius:var(--radius);overflow:hidden;background:#eee7da;aspect-ratio:4/3;box-shadow:var(--shadow)}
+    .product-photo img{width:100%;height:100%;object-fit:cover}
+    .product h1{font-size:clamp(36px,4vw,58px);margin:0 0 12px}
+    .price{font-family:var(--display);font-weight:800;font-size:36px;line-height:1}
+    .price small{font-family:var(--body);font-size:12px;font-weight:700;color:var(--ink-soft);display:block;letter-spacing:.04em;margin-top:4px}
+    .product .desc{margin-top:16px;color:var(--ink-soft);font-size:16.5px;max-width:52ch}
+    .specs{margin:18px 0 0;padding:0;list-style:none;border-top:1px dashed rgba(32,28,48,.2);max-width:420px}
+    .specs li{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px dashed rgba(32,28,48,.2);font-size:15px}
+    .specs span:first-child{color:var(--ink-soft);font-weight:600}
+    .specs span:last-child{font-weight:700;text-align:right}
+    .safety{margin-top:16px;display:flex;gap:8px;align-items:flex-start;background:var(--t-pink);color:var(--ink);border-radius:12px;padding:10px 12px;font-size:14px;font-weight:700;line-height:1.4;max-width:420px}
+    .safety svg{width:16px;height:16px;flex:none;margin-top:1px;color:var(--deep)}
+    .colour-row{border:0;margin:22px 0 0;padding:0;min-width:0}
+    .colour-row legend{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px;padding:0;font-weight:800;font-size:16px}
+    .picked{color:var(--deep);font-weight:800}
+    .picked:empty{display:none}
+    .picked:not(:empty)::before{content:"· ";color:var(--ink-soft);font-weight:700}
+    .dots{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px;padding:6px}
+    .dot-label{position:relative;width:40px;height:40px;display:block}
+    .dot-label input{position:absolute;inset:0;margin:0;opacity:0;cursor:pointer}
+    .dot{display:block;width:40px;height:40px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(32,28,48,.22)}
+    .dot.light{box-shadow:inset 0 0 0 1px rgba(32,28,48,.35)}
+    .dot-label input:checked + .dot{box-shadow:inset 0 0 0 1px rgba(32,28,48,.22), 0 0 0 2px var(--paper), 0 0 0 5px var(--ink)}
+    .dot-label input:checked + .dot.light{box-shadow:inset 0 0 0 1px rgba(32,28,48,.35), 0 0 0 2px var(--paper), 0 0 0 5px var(--ink)}
+    .dot-label input:focus-visible + .dot{outline:3px solid var(--blue);outline-offset:3px}
+    .lettering{margin-top:10px;font-size:14px;font-weight:700;color:var(--ink-soft)}
+    .field{display:grid;gap:6px;margin-top:18px;font-weight:800;font-size:14px}
+    .field span.opt{font-weight:700;color:var(--ink-soft)}
+    .field input,.field textarea{font:500 16px/1.4 var(--body);padding:12px 14px;border-radius:14px;border:2px solid rgba(32,28,48,.18);background:var(--paper);color:var(--ink);width:100%}
+    .field textarea{min-height:96px;resize:vertical}
+    .field input:focus-visible,.field textarea:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+    .buy-block{margin-top:22px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 18px}
+    .checkout-note{flex:1 1 220px;font-size:14.5px;color:var(--ink-soft);font-weight:600}
+    .checkout-note a{color:var(--deep);font-weight:800}
+    .missing{font-size:18px}
+    .missing a{color:var(--deep);font-weight:800}
+    @media (prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      .js .reveal{opacity:1;transform:none;transition:none}
+    }
+    @media (max-width:1020px){ .nav-links{gap:18px} }
+    @media (max-width:860px){
+      .nav-toggle{display:grid;place-items:center;width:44px;height:44px;margin-left:auto;border-radius:14px;border:2px solid var(--ink);background:var(--paper-2);color:var(--ink);cursor:pointer;padding:0}
+      .nav-toggle svg{width:20px;height:20px}
+      .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;padding:6px 20px 16px;background:rgba(246,241,231,.98);border-bottom:1px solid rgba(32,28,48,.08);box-shadow:0 18px 40px -24px rgba(32,28,48,.35)}
+      .nav.is-open .nav-links{display:flex}
+      .nav-links li{display:block}
+      .nav-links a{display:block;white-space:normal;padding:12px 4px;font-size:16px}
+      .foot{grid-template-columns:1fr 1fr}
+      .foot > div:first-child{grid-column:1/-1}
+      .product{grid-template-columns:1fr;gap:22px}
+    }
+    @media (max-width:640px){
+      body{font-size:16px}
+      .wrap{width:calc(100% - 32px)}
+      .nav .wrap{height:64px}
+      .logo{font-size:19px}
+      .nav .btn{padding:10px 14px;font-size:14px}
+      .nav .btn .long{display:none}
+      .foot{grid-template-columns:1fr}
+      .product h1{font-size:34px}
+      .dot-label,.dot{width:36px;height:36px}
+      .dots{gap:12px}
+      .buy-block .btn{width:100%}
+    }
+  </style>
+</head>
+<body>
+  <div class="draftbar"><strong>Draft preview.</strong> The shop isn’t open yet — prices and online checkout are coming soon.</div>
+  <header class="nav">
+    <div class="wrap">
+      <a class="logo" href="index.html" aria-label="Home">
+        <span class="logo-mark"><i data-lucide="printer-3d"></i></span>
+        <span data-shop="name">Veridex Prints</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><i data-lucide="menu"></i></button>
+      <ul class="nav-links" id="site-nav">
+        <li><a href="index.html#catalogue">Toppers</a></li>
+        <li><a href="index.html#personalised-products">Personalised products</a></li>
+        <li><a href="index.html#how">Custom orders</a></li>
+        <li><a href="index.html#colours">Good to know</a></li>
+        <li><a href="index.html#order">Contact</a></li>
+      </ul>
+      <a class="btn btn-dark" href="index.html#catalogue"><span>Order<span class="long"> a topper</span></span><i data-lucide="arrow-right"></i></a>
+    </div>
+  </header>
+  <main>
+    <section class="product-page tint-yellow">
+      <div class="wrap">
+        <p class="back reveal"><a href="index.html#catalogue"><i data-lucide="arrow-left"></i> Back to toppers</a></p>
+        <div id="product" class="product reveal" hidden></div>
+        <p id="missing" class="missing reveal" hidden>We can’t find that topper. <a href="index.html#catalogue">Back to toppers</a></p>
+      </div>
+    </section>
+  </main>
+  <footer class="tint-orange">
+    <div class="wrap">
+      <div class="foot">
+        <div>
+          <a class="logo" href="index.html"><span class="logo-mark"><i data-lucide="printer-3d"></i></span><span data-shop="name">Veridex Prints</span></a>
+          <p style="margin-top:14px;max-width:38ch">Custom 3D-printed cake toppers and gifts, made to order in Ireland.</p>
+        </div>
+        <div>
+          <h4>Maker</h4>
+          <p><span data-shop="makerName">[Maker name]</span> <span class="ph">placeholder</span></p>
+          <p data-shop="makerAddress">[Street, Town, County, Eircode], Ireland</p>
+          <p style="margin-top:8px"><a data-shop="email-link" href="mailto:hello@example.com"><span data-shop="email">hello@example.com</span></a></p>
+        </div>
+        <div>
+          <h4>Shop info</h4>
+          <ul>
+            <li><a href="index.html#" aria-disabled="true">Terms of sale</a> <span class="ph">to do</span></li>
+            <li><a href="index.html#" aria-disabled="true">Returns &amp; refunds</a> <span class="ph">to do</span></li>
+            <li><a href="index.html#" aria-disabled="true">Privacy</a> <span class="ph">to do</span></li>
+            <li><a href="index.html#order">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="legal">
+        <span>© <span id="year">2026</span> <span data-shop="name">Veridex Prints</span>. All rights reserved.</span>
+        <span>Cake toppers: single use. Remove before eating.</span>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (function(){
+      var COLOURS = [
+        { name: "White", hex: "#FFFFFF", light: true },
+        { name: "Black", hex: "#000000" },
+        { name: "Latte Brown", hex: "#D3B7A7" },
+        { name: "Dark Brown", hex: "#7D6556" },
+        { name: "Grass Green", hex: "#61C680" },
+        { name: "Green", hex: "#00AE42" },
+        { name: "Ice Blue", hex: "#A3D8E1" },
+        { name: "Lilac Purple", hex: "#AE96D4" },
+        { name: "Sakura Pink", hex: "#EEA6BC" },
+        { name: "Red", hex: "#C12E1F" },
+        { name: "Mandarin Orange", hex: "#F99963" },
+        { name: "Lemon Yellow", hex: "#F7D959" },
+        { name: "Sunflower Yellow", hex: "#FEC600" }
+      ];
+      var PRODUCTS = {
+        fancy: {
+          title: "Fancy 3D Cake Topper",
+          price: "€12",
+          unit: "PER TOPPER",
+          desc: "White lettering on your choice of base colour. Any name, any age (e.g. Cleo is Eight, Lily is Three)",
+          size: "approx. [—] cm wide",
+          image: "images/hero.jpg",
+          alt: "Pink and white Cleo is Eight cake topper",
+          imgStyle: "object-position:center top",
+          rows: [{ id: "base", label: "Pick your base colour" }],
+          lettering: "The lettering is white."
+        },
+        bubbly: {
+          title: "Bubbly 3D Cake Topper",
+          price: "€12",
+          unit: "PER TOPPER",
+          desc: "White lettering on your choice of base colour. Any name, any number (e.g. Corey is 2, Tommy is 4)",
+          size: "approx. [—] cm tall",
+          image: "images/bubbly-topper.jpg",
+          alt: "Blue and white Corey is 2 bubbly 3D cake topper",
+          imgStyle: "object-position:center top;transform-origin:50% 38%;transform:translateY(9%) scale(1.28)",
+          rows: [{ id: "base", label: "Pick your base colour" }],
+          lettering: "The lettering is white."
+        },
+        scalloped: {
+          title: "Scalloped Daisy & Hearts Topper",
+          price: "€15",
+          unit: "PER TOPPER",
+          desc: "Choose base colour for the main background. For the name & number choose 1 colour as these will be matching. (Base colour + name & number colour).",
+          size: "approx. [—] cm wide",
+          image: "images/scalloped-daisy-topper.jpg",
+          alt: "Pink scalloped cake topper with daisies, hearts and a red 1 Lilly",
+          imgStyle: "object-position:center top;transform-origin:53.5% 39%;transform:translateY(9%) scale(1.28)",
+          rows: [
+            { id: "base", label: "Pick your base colour" },
+            { id: "namecolour", label: "Pick your name & number colour" }
+          ]
+        }
+      };
+
+      var S = window.SHOP || {};
+      function each(sel, fn){ Array.prototype.forEach.call(document.querySelectorAll(sel), fn); }
+      if (S.name){ each('[data-shop="name"]', function(el){ el.textContent = S.name; }); }
+      if (S.email){ each('[data-shop="email"]', function(el){ el.textContent = S.email; });
+        each('[data-shop="email-link"]', function(el){ el.href = el.href.replace(/^mailto:[^?]*/, 'mailto:' + S.email); }); }
+      if (S.makerName) each('[data-shop="makerName"]', function(el){ el.textContent = S.makerName; });
+      if (S.makerAddress) each('[data-shop="makerAddress"]', function(el){ el.textContent = S.makerAddress; });
+      var y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
+
+      var nav = document.querySelector('.nav');
+      var navToggle = document.querySelector('.nav-toggle');
+      if (nav && navToggle) {
+        navToggle.addEventListener('click', function(){
+          var open = nav.classList.toggle('is-open');
+          navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+        each('#site-nav a', function(a){
+          a.addEventListener('click', function(){
+            nav.classList.remove('is-open');
+            navToggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+
+      var slug = new URLSearchParams(location.search).get('item');
+      var product = PRODUCTS[slug];
+      var root = document.getElementById('product');
+      var missing = document.getElementById('missing');
+      if (!product) {
+        missing.hidden = false;
+        if (window.lucide) lucide.createIcons();
+        requestAnimationFrame(function(){ each('.reveal', function(el){ el.classList.add('in'); }); });
+        return;
+      }
+      document.title = (S.name || 'Veridex Prints') + ' — ' + product.title;
+      root.hidden = false;
+
+      var photo = document.createElement('div');
+      photo.className = 'product-photo';
+      var img = document.createElement('img');
+      img.src = product.image;
+      img.alt = product.alt;
+      img.setAttribute('style', product.imgStyle || '');
+      photo.appendChild(img);
+
+      var info = document.createElement('div');
+      var h1 = document.createElement('h1');
+      h1.textContent = product.title;
+      var price = document.createElement('p');
+      price.className = 'price';
+      price.appendChild(document.createTextNode(product.price));
+      var unit = document.createElement('small');
+      unit.textContent = product.unit;
+      price.appendChild(unit);
+      var desc = document.createElement('p');
+      desc.className = 'desc';
+      desc.textContent = product.desc;
+      var specs = document.createElement('ul');
+      specs.className = 'specs';
+      var size = document.createElement('li');
+      var sizeLabel = document.createElement('span');
+      sizeLabel.textContent = 'Size';
+      var sizeValue = document.createElement('span');
+      sizeValue.textContent = product.size;
+      size.appendChild(sizeLabel);
+      size.appendChild(sizeValue);
+      specs.appendChild(size);
+      var safety = document.createElement('p');
+      safety.className = 'safety';
+      safety.innerHTML = '<i data-lucide="info"></i> Single use. Remove before eating.';
+
+      var picks = {};
+      function selected(id){
+        var input = root.querySelector('input[name="' + id + '"]:checked');
+        return input ? input.value : '';
+      }
+      var orderLink = document.createElement('a');
+      orderLink.id = 'order-link';
+      orderLink.textContent = 'order form';
+      function updateOrderLink(){
+        var params = new URLSearchParams();
+        params.set('item', product.title);
+        product.rows.forEach(function(row){
+          var value = selected(row.id);
+          if (value) params.set(row.id, value);
+        });
+        var wording = (document.getElementById('wording') || {}).value || '';
+        var notes = (document.getElementById('notes') || {}).value || '';
+        if (wording.trim()) params.set('wording', wording.trim());
+        if (notes.trim()) params.set('notes', notes.trim());
+        orderLink.href = 'index.html?' + params.toString() + '#order';
+      }
+      product.rows.forEach(function(row){
+        var field = document.createElement('fieldset');
+        field.className = 'colour-row';
+        var legend = document.createElement('legend');
+        var legendId = 'legend-' + row.id;
+        legend.id = legendId;
+        legend.appendChild(document.createTextNode(row.label));
+        var picked = document.createElement('strong');
+        picked.className = 'picked';
+        picked.id = 'picked-' + row.id;
+        legend.appendChild(picked);
+        var dots = document.createElement('div');
+        dots.className = 'dots';
+        dots.setAttribute('role', 'radiogroup');
+        dots.setAttribute('aria-labelledby', legendId);
+        COLOURS.forEach(function(colour){
+          var label = document.createElement('label');
+          label.className = 'dot-label';
+          var input = document.createElement('input');
+          input.type = 'radio';
+          input.name = row.id;
+          input.value = colour.name;
+          var dot = document.createElement('span');
+          dot.className = 'dot' + (colour.light ? ' light' : '');
+          dot.style.background = colour.hex;
+          dot.setAttribute('aria-hidden', 'true');
+          var name = document.createElement('span');
+          name.className = 'sr-only';
+          name.textContent = colour.name;
+          label.appendChild(input);
+          label.appendChild(dot);
+          label.appendChild(name);
+          dots.appendChild(label);
+        });
+        field.appendChild(legend);
+        field.appendChild(dots);
+        field.addEventListener('change', function(){
+          picked.textContent = selected(row.id);
+          updateOrderLink();
+        });
+        info.appendChild(field);
+        picks[row.id] = field;
+      });
+
+      var wording = document.createElement('label');
+      wording.className = 'field';
+      wording.appendChild(document.createTextNode('Name & number (or age)'));
+      var wordingInput = document.createElement('input');
+      wordingInput.id = 'wording';
+      wordingInput.type = 'text';
+      wordingInput.name = 'wording';
+      wordingInput.maxLength = 80;
+      wordingInput.placeholder = 'Lily is Three';
+      wordingInput.autocomplete = 'off';
+      wording.appendChild(wordingInput);
+      var notes = document.createElement('label');
+      notes.className = 'field';
+      notes.appendChild(document.createTextNode('Notes '));
+      var opt = document.createElement('span');
+      opt.className = 'opt';
+      opt.textContent = '(optional)';
+      notes.appendChild(opt);
+      var notesInput = document.createElement('textarea');
+      notesInput.id = 'notes';
+      notesInput.name = 'notes';
+      notesInput.maxLength = 400;
+      notes.appendChild(notesInput);
+      wordingInput.addEventListener('input', updateOrderLink);
+      notesInput.addEventListener('input', updateOrderLink);
+
+      var buy = document.createElement('div');
+      buy.className = 'buy-block';
+      var soon = document.createElement('button');
+      soon.className = 'btn btn-pink';
+      soon.type = 'button';
+      soon.disabled = true;
+      soon.setAttribute('aria-disabled', 'true');
+      soon.textContent = 'Coming soon';
+      var note = document.createElement('p');
+      note.className = 'checkout-note';
+      note.appendChild(document.createTextNode('Online checkout opens soon. Want one now? Send us your choices through the '));
+      note.appendChild(orderLink);
+      note.appendChild(document.createTextNode('.'));
+      buy.appendChild(soon);
+      buy.appendChild(note);
+
+      info.insertBefore(h1, info.firstChild);
+      info.insertBefore(price, picks[product.rows[0].id]);
+      info.insertBefore(desc, picks[product.rows[0].id]);
+      info.insertBefore(specs, picks[product.rows[0].id]);
+      info.insertBefore(safety, picks[product.rows[0].id]);
+      var firstRow = picks[product.rows[0].id];
+      if (product.lettering) {
+        var letter = document.createElement('p');
+        letter.className = 'lettering';
+        letter.textContent = product.lettering;
+        firstRow.appendChild(letter);
+      }
+      var lastRow = picks[product.rows[product.rows.length - 1].id];
+      lastRow.insertAdjacentElement('afterend', wording);
+      wording.insertAdjacentElement('afterend', notes);
+      notes.insertAdjacentElement('afterend', buy);
+      root.appendChild(photo);
+      root.appendChild(info);
+      updateOrderLink();
+
+      if (window.lucide) lucide.createIcons();
+      requestAnimationFrame(function(){ each('.reveal', function(el){ el.classList.add('in'); }); });
+    })();
+  </script>
+</body>
+</html>
