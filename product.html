@@ -232,7 +232,8 @@
           alt: "Pink and white Cleo is Eight cake topper",
           imgStyle: "object-position:center top",
           rows: [{ id: "base", label: "Pick your base colour" }],
-          lettering: "The lettering is white."
+          lettering: "The lettering is white.",
+          placeholder: "Lily is Three"
         },
         bubbly: {
           title: "Bubbly 3D Cake Topper",
@@ -244,7 +245,8 @@
           alt: "Blue and white Corey is 2 bubbly 3D cake topper",
           imgStyle: "object-position:center top;transform-origin:50% 38%;transform:translateY(9%) scale(1.28)",
           rows: [{ id: "base", label: "Pick your base colour" }],
-          lettering: "The lettering is white."
+          lettering: "The lettering is white.",
+          placeholder: "Lily is 3"
         },
         scalloped: {
           title: "Scalloped Daisy & Hearts Topper",
@@ -258,7 +260,8 @@
           rows: [
             { id: "base", label: "Pick your base colour" },
             { id: "namecolour", label: "Pick your name & number colour" }
-          ]
+          ],
+          placeholder: "Lily is 3"
         }
       };
 
@@ -406,7 +409,7 @@
       wordingInput.type = 'text';
       wordingInput.name = 'wording';
       wordingInput.maxLength = 80;
-      wordingInput.placeholder = 'Lily is Three';
+      wordingInput.placeholder = product.placeholder || 'Lily is Three';
       wordingInput.autocomplete = 'off';
       wording.appendChild(wordingInput);
       var notes = document.createElement('label');
