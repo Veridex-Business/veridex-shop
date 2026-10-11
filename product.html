@@ -233,7 +233,8 @@
           imgStyle: "object-position:center top",
           rows: [{ id: "base", label: "Pick your base colour" }],
           lettering: "The lettering is white.",
-          placeholder: "Lily is Three"
+          placeholder: "Lily is Three",
+          wordingLabel: "Name & number (or age)"
         },
         bubbly: {
           title: "Bubbly 3D Cake Topper",
@@ -246,7 +247,8 @@
           imgStyle: "object-position:center top;transform-origin:50% 38%;transform:translateY(9%) scale(1.28)",
           rows: [{ id: "base", label: "Pick your base colour" }],
           lettering: "The lettering is white.",
-          placeholder: "Lily is 3"
+          placeholder: "Lily is 3",
+          wordingLabel: "Name and age (number)"
         },
         scalloped: {
           title: "Scalloped Daisy & Hearts Topper",
@@ -261,7 +263,8 @@
             { id: "base", label: "Pick your base colour" },
             { id: "namecolour", label: "Pick your name & number colour" }
           ],
-          placeholder: "Lily is 3"
+          placeholder: "Lily is 3",
+          wordingLabel: "Name and age (number)"
         }
       };
 
@@ -353,7 +356,12 @@
         });
         var wording = (document.getElementById('wording') || {}).value || '';
         var notes = (document.getElementById('notes') || {}).value || '';
-        if (wording.trim()) params.set('wording', wording.trim());
+        if (wording.trim()) {
+          params.set('wording', wording.trim());
+          if (product.wordingLabel && product.wordingLabel !== 'Name & number (or age)') {
+            params.set('wordingLabel', product.wordingLabel);
+          }
+        }
         if (notes.trim()) params.set('notes', notes.trim());
         orderLink.href = 'index.html?' + params.toString() + '#order';
       }
@@ -403,7 +411,7 @@
 
       var wording = document.createElement('label');
       wording.className = 'field';
-      wording.appendChild(document.createTextNode('Name & number (or age)'));
+      wording.appendChild(document.createTextNode(product.wordingLabel || 'Name & number (or age)'));
       var wordingInput = document.createElement('input');
       wordingInput.id = 'wording';
       wordingInput.type = 'text';

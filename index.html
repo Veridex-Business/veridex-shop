@@ -728,7 +728,7 @@
         var lines = ['Topper: ' + q.get('item')];
         if (q.get('base')) lines.push('Base colour: ' + q.get('base'));
         if (q.get('namecolour')) lines.push('Name & number colour: ' + q.get('namecolour'));
-        if (q.get('wording')) lines.push('Name & number: ' + q.get('wording'));
+        if (q.get('wording')) lines.push((q.get('wordingLabel') || 'Name & number') + ': ' + q.get('wording'));
         if (q.get('notes')) lines.push('Notes: ' + q.get('notes'));
         var body = encodeURIComponent(lines.join('\n'));
         each('a[data-shop="email-link"]', function(el){
