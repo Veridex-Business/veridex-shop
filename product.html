@@ -90,8 +90,12 @@
     .specs li{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px dashed rgba(32,28,48,.2);font-size:15px}
     .specs span:first-child{color:var(--ink-soft);font-weight:600}
     .specs span:last-child{font-weight:700;text-align:right}
-    .safety{margin-top:16px;display:flex;gap:8px;align-items:flex-start;background:var(--t-pink);color:var(--ink);border-radius:12px;padding:10px 12px;font-size:14px;font-weight:700;line-height:1.4;max-width:420px}
-    .safety svg{width:16px;height:16px;flex:none;margin-top:1px;color:var(--deep)}
+    .specs li.size-line{align-items:center;gap:8px;flex-wrap:nowrap}
+    .size-copy{display:flex;flex-flow:row nowrap;align-items:baseline;gap:8px;flex:0 0 auto;font-size:15px;line-height:1.2}
+    .size-copy span:first-child{color:var(--ink-soft);font-weight:600}
+    .size-copy span:last-child{color:var(--ink);font-weight:700;text-align:left;white-space:nowrap}
+    .safety{margin:0;display:inline-flex;align-items:center;gap:5px;background:var(--t-pink);color:var(--ink);border-radius:999px;padding:6px 10px;font-size:13px;font-weight:700;line-height:1.15;white-space:nowrap;flex:0 0 auto}
+    .safety svg{width:14px;height:14px;flex:none;color:var(--deep)}
     .colour-row{border:0;margin:22px 0 0;padding:0;min-width:0}
     .colour-row legend{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px;padding:0;font-weight:800;font-size:16px}
     .picked{color:var(--deep);font-weight:800}
@@ -144,6 +148,10 @@
       .dot-label,.dot{width:36px;height:36px}
       .dots{gap:10px}
       .buy-block .btn{width:100%}
+      .specs li.size-line{gap:6px}
+      .size-copy{font-size:12px;gap:6px}
+      .safety{padding:4px 7px;font-size:10px;gap:3px}
+      .safety svg{width:11px;height:11px}
     }
   </style>
 </head>
@@ -328,16 +336,21 @@
       var specs = document.createElement('ul');
       specs.className = 'specs';
       var size = document.createElement('li');
+      size.className = 'size-line';
+      var sizeCopy = document.createElement('span');
+      sizeCopy.className = 'size-copy';
       var sizeLabel = document.createElement('span');
       sizeLabel.textContent = 'Size';
       var sizeValue = document.createElement('span');
       sizeValue.textContent = product.size;
-      size.appendChild(sizeLabel);
-      size.appendChild(sizeValue);
-      specs.appendChild(size);
+      sizeCopy.appendChild(sizeLabel);
+      sizeCopy.appendChild(sizeValue);
       var safety = document.createElement('p');
       safety.className = 'safety';
       safety.innerHTML = '<i data-lucide="info"></i> Single use. Remove before eating.';
+      size.appendChild(sizeCopy);
+      size.appendChild(safety);
+      specs.appendChild(size);
 
       var picks = {};
       function selected(id){
@@ -453,7 +466,6 @@
       info.insertBefore(price, picks[product.rows[0].id]);
       info.insertBefore(desc, picks[product.rows[0].id]);
       info.insertBefore(specs, picks[product.rows[0].id]);
-      info.insertBefore(safety, picks[product.rows[0].id]);
       var firstRow = picks[product.rows[0].id];
       if (product.lettering) {
         var letter = document.createElement('p');
