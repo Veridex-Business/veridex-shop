@@ -164,6 +164,8 @@
     .card h3 a{color:inherit;text-decoration:none}
     .card h3 a:hover{color:var(--deep)}
     .choose-link{align-self:flex-start;flex:none;margin-top:10px;font:800 13px/1 var(--body);color:var(--deep);text-decoration:none}
+    /* Catalogue cards without a Choose colours link still keep that row of space, so collapsed cards match. */
+    #catalogue .card:not(:has(.choose-link)) h3{margin-bottom:calc(8px + 10px + 13px)}
     .choose-link:hover{text-decoration:underline}
     .card .desc{color:var(--ink-soft);font-size:15.5px;line-height:1.4}
     .specs{margin:16px 0 0;padding:0;list-style:none;border-top:1px dashed rgba(32,28,48,.2)}
@@ -328,6 +330,7 @@
       .details-toggle{margin-top:8px;padding:4px 8px 4px 9px;font-size:11px;gap:2px}
       .details-toggle svg{width:13px;height:13px}
       .choose-link{margin-top:8px;font-size:12px}
+      #catalogue .card:not(:has(.choose-link)) h3{margin-bottom:calc(6px + 8px + 12px)}
     }
   </style>
 </head>
@@ -438,7 +441,7 @@
             <div class="body">
               <h3><a href="product.html?item=scalloped">Scalloped Daisy &amp; Hearts Topper</a></h3>
               <a class="choose-link" href="product.html?item=scalloped">Choose colours</a>
-              <p class="desc">Choose base colour for the main background. For the name &amp; number choose 1 colour as these will be matching. (Base colour + name &amp; number colour).</p>
+              <p class="desc">Choose two colours: one for the background, and one for the name and number.</p>
               <ul class="specs">
                 <li class="size-line"><span class="size-copy"><span>Size</span><span>approx. [—] cm wide</span></span><p class="safety"><i data-lucide="info"></i> Single use</p></li>
                 <li><span>Colours</span><span>Pick 2 (background + name/age)</span></li>
@@ -666,8 +669,8 @@
             <h3>Good to know</h3>
             <ul class="care">
               <li><span class="ico"><i data-lucide="shield-check"></i></span><div><strong>PLA Plastic</strong><span class="t">Our 3D prints and cake toppers are made from 3D printed PLA, a plant based plastic made from renewable resources like corn starch and sugarcane.</span></div></li>
-              <li><span class="ico"><i data-lucide="cake-slice"></i></span><div><strong>Single use</strong><span class="t">Toppers are single use only. 3D printed layer lines cannot be fully cleaned after contact with food. Keep as a memento or disposal.</span></div></li>
-              <li><span class="ico"><i data-lucide="thermometer-sun"></i></span><div><strong>Keep away from heat</strong><span class="t">PLA softens with heat — hand wash only with cool soapy water.</span></div></li>
+              <li><span class="ico"><i data-lucide="cake-slice"></i></span><div><strong>Single use</strong><span class="t">Single use. Remove before eating. If you'd like to keep your topper as a memento, gently hand wash it with cool soapy water and let it dry before storing.</span></div></li>
+              <li><span class="ico"><i data-lucide="thermometer-sun"></i></span><div><strong>Keep away from heat</strong><span class="t">PLA softens with heat.</span></div></li>
               <li><span class="ico"><i data-lucide="baby"></i></span><div><strong>Keep away from small children</strong><span class="t">Can contain small parts and pointed sticks.</span></div></li>
             </ul>
           </div>
