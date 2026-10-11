@@ -90,5 +90,4 @@ In the footer, the three links point to `#` for now. When the pages exist (e.g. 
 
 - Add `?static` to the end of the address (e.g. `index.html?static`) to turn off the scroll animations. This is handy for screenshots.
 - The page loads its fonts (Google Fonts) and icons (lucide) from the internet, so it needs a connection to look right.
-- "Food-safe PLA": keep a copy of your filament maker's food-contact statement for the exact filament you use, to back up this claim.
 - The original HALFTONE template file wasn't available when this draft was made. The look was rebuilt in the same style: paper colours, Fraunces and Manrope fonts, the pink "misprint" words and the stacking sections.
