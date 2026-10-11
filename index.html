@@ -160,7 +160,7 @@
     .card .tag{position:absolute;left:12px;top:12px;background:var(--paper-2);border-radius:999px;padding:6px 10px;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;box-shadow:var(--shadow-sm)}
     .card .body{padding:20px 22px 22px;display:flex;flex-direction:column;flex:1;min-height:0}
     .card h3{font-size:25px;line-height:1.15;margin-bottom:8px;height:calc(1.15em * 2);display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;overflow:hidden}
-    .card .desc{color:var(--ink-soft);font-size:15.5px;line-height:1.4;height:calc(1.4em * 4);display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:4;line-clamp:4;overflow:hidden}
+    .card .desc{color:var(--ink-soft);font-size:15.5px;line-height:1.4}
     .specs{margin:16px 0 0;padding:0;list-style:none;border-top:1px dashed rgba(32,28,48,.2)}
     .specs li{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px dashed rgba(32,28,48,.2);font-size:14px}
     .specs span:first-child{color:var(--ink-soft);font-weight:600}
@@ -174,7 +174,8 @@
     .details-toggle{display:inline-flex;align-items:center;align-self:flex-start;flex:none;gap:4px;margin:12px 0 0;padding:5px 10px 5px 12px;border-radius:999px;border:1.5px solid var(--ink);background:transparent;color:var(--ink);font:800 13px/1 var(--body);letter-spacing:.02em;cursor:pointer}
     .details-toggle svg{width:15px;height:15px;transition:transform .3s ease}
     .details-toggle:focus-visible{outline:2px solid var(--deep);outline-offset:2px}
-    .card.is-open h3,.card.is-open .desc{height:auto;-webkit-line-clamp:unset;line-clamp:unset;display:block}
+    .card.is-open h3{height:auto;-webkit-line-clamp:unset;line-clamp:unset;display:block}
+    .card-details .desc{margin-top:12px}
     .card.is-open .details-toggle svg{transform:rotate(180deg)}
     .card-details{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease;flex:none;min-height:0}
     .card.is-open .card-details{grid-template-rows:1fr}
@@ -743,7 +744,7 @@
         });
       }
 
-      // Product specs and the single-use note stay in the page for no-JS.
+      // Description, specs and the single-use note stay in the page for no-JS.
       // With JS, they collapse behind a Details control on every product card.
       each('.grid .card', function(card, i){
         var specs = card.querySelector('.specs');
@@ -751,6 +752,7 @@
         var n = i + 1;
         var panelId = 'card-details-' + n;
         var btnId = 'card-details-btn-' + n;
+        var desc = card.querySelector(':scope > .body > .desc');
         var safety = card.querySelector(':scope > .body > .safety');
         var inner = document.createElement('div');
         inner.className = 'card-details-inner';
@@ -761,6 +763,7 @@
         panel.setAttribute('aria-labelledby', btnId);
         panel.setAttribute('aria-hidden', 'true');
         specs.parentNode.insertBefore(panel, specs);
+        if (desc) inner.appendChild(desc);
         inner.appendChild(specs);
         if (safety) inner.appendChild(safety);
         panel.appendChild(inner);
